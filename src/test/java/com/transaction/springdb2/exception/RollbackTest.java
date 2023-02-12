@@ -24,19 +24,16 @@ public class RollbackTest {
     }
 
     @Test
-    public void checkedException()  {
+    public void checkedException() {
         Assertions.assertThatThrownBy(() -> service.checkedException())
                 .isInstanceOf(MyException.class);
     }
 
     @Test
-    public void rollbackFor()  {
+    public void rollbackFor() {
         Assertions.assertThatThrownBy(() -> service.rollbackFor())
                 .isInstanceOf(MyException.class);
     }
-
-
-
 
 
     @TestConfiguration
